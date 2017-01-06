@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="swiper/dist/css/swiper.css"/>
+	<link rel="stylesheet" type="text/css" href="swiper-animate/animate.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="css/class.css"/>
+	<script src="swiper/dist/js/swiper.js" type="text/javascript" charset="utf-8"></script>
+	<script src="swiper-animate/swiper.animate1.0.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="node_modules/iscroll/src/iscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vipspa.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+	
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1)">返回</a>
+		<h2>zxiu 走秀网</h2>
+	</header>
+	<div id="search">
+		<form>
+			<button>搜索</button>
+			<input type="text" name="" id="" value="" />
+		</form>
+	</div>
+	<div id="first">
+		<div id="view">
+			
+		</div>
+	</div>
+	
+	<footer id="foot">
+		<ul>
+			<li><a href="#home">首页</a></li>
+			<li><a href="#class">分类</a></li>
+			<li><a href="#shopping">购物车</a></li>
+			<li><a href="#myShow">我的秀</a></li>
+			<li><a href="#more">更多</a></li>
+		</ul>
+	</footer>
+	
+	<script type="text/javascript">
+		
+		$(function() {
+			vipspa.start({
+				view:'#view',
+				router: {
+					'home': {
+						templateUrl: 'viewindex/home.html',
+						controller: 'js/home.js'
+					},
+					'class': {
+						templateUrl: 'viewindex/class.html',
+						controller: 'zepto/dist/zepto.js'
+					},
+					'shopping': {
+						templateUrl: 'viewindex/shopping.html',
+						controller: 'js/shopping.js'
+					},
+					'myShow': {
+						templateUrl: 'viewindex/myShow.html',
+						controller: 'zepto/dist/zepto.js'
+					},
+					'more': {
+						templateUrl: 'viewindex/more.html',
+						controller: 'zepto/dist/zepto.js'
+					},
+					'sign': {
+						templateUrl: 'viewindex/sign.html',
+						controller: 'js/sign.js'
+					},
+					'register': {
+						templateUrl: 'viewindex/register.html',
+						controller: 'js/register.js'
+					}
+				}
+			})
+		})
+		
+	</script>
+	
+</body>
+</html>

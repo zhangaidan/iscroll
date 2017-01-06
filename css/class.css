@@ -1,0 +1,86 @@
+@charset "utf-8";
+.list {
+	width: 100%;
+}
+.list li {
+	height: 30px;
+	border-bottom: 1px solid #c33;
+	font-size: 20px;
+	line-height: 30px;
+	padding-left: 10px;
+}
+.mas {
+	margin: 30px 0 0 30px;
+}
+.mas-wrapper {
+	display: flex;
+}
+.button {
+	display: flex;
+	
+}
+.button button {
+	background-color: #F25582;
+	border-radius: 20px;
+	border: 0;
+	flex: 1;
+}
+.container {
+	background-color: #F7F7F7;
+}
+.mas-list {
+	width: 80%;
+	margin-left: 10%;
+	height: 290px;
+	border: 1px solid #00FFFF;
+}
+.mas-list ul li {
+	border-bottom: 1px solid #FF8000;
+	height: 70px;
+	width: 100%;
+	font-size: 40px;
+	line-height: 70px;
+}
+.sign-container {
+	width: 100%;
+}
+.sign-container form input {
+	padding: 10px;
+	width: 70%;
+	margin-top: 30px;
+	margin-left: 15%;
+	border: 1px solid #c33;
+	border-radius: 20px;
+}
+.sign-container form .checked {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	border-radius: 0;
+	-webkit-appearance: checkbox;
+}
+.classify {
+	width: 100%;
+	height: 300px;
+	border-bottom: 1px solid #c33;
+	overflow: hidden;
+}
+.classify img {
+	width: 200px;
+	height: 200px;
+}
+.addCar {
+	height: 200px;
+	width: 80%;
+	margin-left: 10%;
+	border: 1px solid #F25582;
+	border-top: 0;
+	overflow: hidden;
+}
+.addCar img {
+	height: 100px;
+	width: 100px;
+}
+.addCar button {
+	display: inline-block;
+}

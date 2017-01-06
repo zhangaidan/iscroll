@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<ul class="list">
+			
+		</ul>
+	</body>
+	<script type="text/javascript">
+		var list = $('.list')
+		$.ajax({
+			type:"get",
+			url:"http://datainfo.duapp.com/shopdata/getclass.php",
+			success: function(res) {
+				console.info(JSON.parse(res))
+				var z = JSON.parse(res);
+				var listStr = [];
+				$.each(z,function(o,vl) {
+					var str = '<li cid="'+ vl.classID +'"><a href="#goodslist">'+ vl.className +'</a></li>'
+					listStr.push(str);
+				})
+				list.append(listStr);
+			}
+		});
+		
+		$('.list').on('click','li',function(e){
+			console.log($(this).attr('cid'))
+			var cid = $(this).attr('cid');
+			$.ajax({
+				type:"get",
+				url:"http://datainfo.duapp.com/shopdata/getGoods.php",
+				dataType: 'jsonp',
+				data:{
+					classID:cid,
+					pageCode:0,
+					linenumber:5
+				},
+				success: function(res) {
+					console.log(res)
+					var classList = [];
+					$.each(res,function(o,vl) {
+						var str = '<div class="classify"><p>'+ vl.goodsName +'</p><img src="' + vl[3] + '"></div>';
+						classList.push(str)
+					})
+					list.html('');
+					list.append(classList)
+				}
+			});
+		})
+	</script>
+</html>
